@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<!-- saved from url=(0014)about:internet -->
+<head>
+    <title>TransparentSilverlight</title>
+    <style type="text/css">
+    html, body {
+	    height: 100%;
+	    overflow: auto;
+    }
+    body {
+	    padding: 0;
+	    margin: 0;
+        font-family: verdana, sans-serif;
+        font-size: small;
+    }
+    #silverlightControlHost {
+	    height: 100%;
+	    text-align:center;	    
+    }
+    
+    .SilverlightLeftPanel
+    {
+        background-image: url('tiles5x5.png');
+        background-repeat:repeat;
+        position: absolute;
+        top: 70px;
+        left: 10px;
+        width: 142px;
+        height: 400px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: black;
+        padding: 8px;
+    }
+
+    .HtmlLeftPanel
+    {
+        background-color: Transparent;
+        position: absolute;
+        top: 300px;
+        left: 10px;
+        width: 142px;
+        font-weight: bold;
+        border-width: 1px;
+        border-style: solid;
+        border-color: black;
+        padding: 8px;
+    }
+
+    .Header
+    {
+        text-align: center;
+        background-color: rgb(210,210,210);
+        color: white;
+    }
+    .Header h1
+     {
+        padding: 13px;
+        margin-bottom: 10px;
+        font-size: large;
+    }
+    
+    .RightPanel
+     {
+        position: absolute;
+        top: 70px;
+        right: 25px;
+        width: 150px;
+        background-color:#eee;
+        border-width: 1px;
+        border-style: solid;
+        border-color: black;
+        padding: 8px;
+    }
+
+    .CenterPanel
+    {
+        margin-left: 176px;
+        margin-right: 176px;
+    }
+    </style>
+    
+    <script type="text/javascript">
+        function onSilverlightError(sender, args) {
+            var appSource = "";
+            if (sender != null && sender != 0) {
+              appSource = sender.getHost().Source;
+            }
+            
+            var errorType = args.ErrorType;
+            var iErrorCode = args.ErrorCode;
+
+            if (errorType == "ImageError" || errorType == "MediaError") {
+              return;
+            }
+
+            var errMsg = "Unhandled Error in Silverlight Application " +  appSource + "\n" ;
+
+            errMsg += "Code: "+ iErrorCode + "    \n";
+            errMsg += "Category: " + errorType + "       \n";
+            errMsg += "Message: " + args.ErrorMessage + "     \n";
+
+            if (errorType == "ParserError") {
+                errMsg += "File: " + args.xamlFile + "     \n";
+                errMsg += "Line: " + args.lineNumber + "     \n";
+                errMsg += "Position: " + args.charPosition + "     \n";
+            }
+            else if (errorType == "RuntimeError") {           
+                if (args.lineNumber != 0) {
+                    errMsg += "Line: " + args.lineNumber + "     \n";
+                    errMsg += "Position: " +  args.charPosition + "     \n";
+                }
+                errMsg += "MethodName: " + args.methodName + "     \n";
+            }
+
+            throw new Error(errMsg);
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server" style="height:100%">
+    <div class="Header">
+    <h1>An HTML Page with Silverlight Content</h1>
+    </div>
+    
+    <div class="SilverlightLeftPanel">
+    <div id="silverlightControlHost">
+        <object data="data:application/x-silverlight-2," type="application/x-silverlight-2" width="100%" height="100%">
+		  <param name="source" value="TransparentSilverlight.xap"/>
+		  <param name="onError" value="onSilverlightError" />
+		  <param name="background" value="transparent" />
+		  <param name="windowless" value="true" />
+		  <param name="minRuntimeVersion" value="3.0.40624.0" />
+		  <param name="autoUpgrade" value="true" />
+		  <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration:none">
+ 			  <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"/>
+		  </a>
+	    </object><iframe id="_sl_historyFrame" style="visibility:hidden;height:0px;width:0px;border:0px"></iframe></div>
+	</div>
+
+    <div class="HtmlLeftPanel" >
+      <p>This is HTML text.</p>
+    </div>
+
+    <div class="RightPanel">
+        <p>This panel also holds ordinary HTML content.</p>
+    </div>
+    
+    <div class="CenterPanel">
+        <p>This panel holds ordinary HTML content. The panel on the left holds a Silverlight control.</p>
+    </div>
+    </form>
+</body>
+</html>

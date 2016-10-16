@@ -1,0 +1,60 @@
+﻿<UserControl xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"  xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data" 
+    x:Class="DataControls.DataGridEditing"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Loaded="Page_Loaded"
+    xmlns:local="clr-namespace:DataControls">
+
+	<UserControl.Resources>
+		<local:DateOnlyConverter x:Key="DateOnlyConverter"></local:DateOnlyConverter>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<data:DataGrid x:Name="gridProducts" Margin="5" AutoGenerateColumns="False"
+		>
+
+			<data:DataGrid.Columns>
+				<data:DataGridTextColumn Header="Product" Width="175" Binding="{Binding ModelName}"></data:DataGridTextColumn>
+                <data:DataGridTextColumn Header="Price" Binding="{Binding UnitCost, StringFormat='C'}"></data:DataGridTextColumn>
+				<data:DataGridTextColumn Header="Model Number" Binding="{Binding ModelNumber}"></data:DataGridTextColumn>				
+
+				<data:DataGridTemplateColumn Header="Category">
+					<data:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<TextBlock Margin="4" VerticalAlignment="Center" Text="{Binding CategoryName}"></TextBlock>
+						</DataTemplate>
+					</data:DataGridTemplateColumn.CellTemplate>
+					<data:DataGridTemplateColumn.CellEditingTemplate>
+						<DataTemplate>
+							<ComboBox Margin="4" ItemsSource="{Binding CategoryChoices}"
+       SelectedItem="{Binding CategoryName, Mode=TwoWay}">
+							</ComboBox>
+						</DataTemplate>
+					</data:DataGridTemplateColumn.CellEditingTemplate>
+				</data:DataGridTemplateColumn>
+
+
+				<data:DataGridTemplateColumn Header="Date Added" >
+					<data:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<TextBlock Margin="4" VerticalAlignment="Center" Text="{Binding DateAdded, Converter={StaticResource DateOnlyConverter}}"></TextBlock>
+						</DataTemplate>
+					</data:DataGridTemplateColumn.CellTemplate>
+					<data:DataGridTemplateColumn.CellEditingTemplate>
+						<DataTemplate>
+							<controls:DatePicker Margin="4" SelectedDate="{Binding DateAdded, Mode=TwoWay}"></controls:DatePicker>
+						</DataTemplate>
+					</data:DataGridTemplateColumn.CellEditingTemplate>
+				</data:DataGridTemplateColumn>
+
+			</data:DataGrid.Columns>
+		</data:DataGrid>
+
+		<TextBlock Grid.Row="1" x:Name="lblInfo" Margin="5"></TextBlock>
+	</Grid>
+</UserControl>

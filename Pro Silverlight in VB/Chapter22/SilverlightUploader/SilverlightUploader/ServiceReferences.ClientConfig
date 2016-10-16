@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="CustomBinding_FileService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:9665/SilverlightUploader.Web/FileService.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_FileService"
+                contract="Services.FileService" name="CustomBinding_FileService" />
+        </client>
+    </system.serviceModel>
+</configuration>

@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="BrushesBitmapsPrinting.Simulated3D"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Grid x:Name="LayoutRoot" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border BorderBrush="SlateGray" CornerRadius="2" BorderThickness="4" Padding="10"
+                Height="140" Width="170">
+            <Border.Projection>
+                <PlaneProjection x:Name="projection"></PlaneProjection>
+            </Border.Projection>
+            <StackPanel>
+                <TextBlock>Type Here:</TextBlock>
+                <TextBox></TextBox>
+                <Button Margin="0,5" Content="OK"></Button>
+                <Image Source="happyface.jpg" Stretch="None"></Image>
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Row="1" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Margin="5">RotationX</TextBlock>
+            <Slider Grid.Column="1" Minimum="-180" Maximum="180"                
+                Value="{Binding RotationX, Mode=TwoWay, ElementName=projection}"/>
+
+            <TextBlock Grid.Row="1" Margin="5">RotationY</TextBlock>
+            <Slider Grid.Row="1" Grid.Column="1" Minimum="-180" Maximum="180"                
+                Value="{Binding RotationY, Mode=TwoWay, ElementName=projection}"/>
+
+            <TextBlock Grid.Row="2" Margin="5">RotationZ</TextBlock>
+            <Slider Grid.Row="2" Grid.Column="1" Minimum="-180" Maximum="180"                
+                Value="{Binding RotationZ, Mode=TwoWay, ElementName=projection}"/>
+
+
+        </Grid>
+
+        <StackPanel Grid.Row="3"  Orientation="Horizontal" HorizontalAlignment="Center">
+            <RepeatButton Padding="4" Margin="1" Content="+GlobalX" Click="plusGlobalX_Click"></RepeatButton>
+            <RepeatButton Padding="4" Margin="1" Grid.Column="1" Content="-GlobalX" Click="minusGlobalX_Click"></RepeatButton>
+            <RepeatButton Padding="4" Margin="1" Content="+LocalX" Click="plusLocalX_Click"></RepeatButton>
+            <RepeatButton Padding="4" Margin="1" Grid.Column="1" Content="-LocalX" Click="minusLocalX_Click"></RepeatButton>
+        </StackPanel>
+    </Grid>
+</UserControl>

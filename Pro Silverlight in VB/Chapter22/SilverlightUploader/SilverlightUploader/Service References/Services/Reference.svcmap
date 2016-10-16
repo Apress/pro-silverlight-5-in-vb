@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="55c216c4-70bd-4aa5-8f23-7cd95501873a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9665/SilverlightUploader.Web/FileService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FileService.xsd" MetadataType="Schema" ID="94e35653-67cc-4cad-b727-01ddf1d45a2b" SourceId="1" SourceUrl="http://localhost:9665/SilverlightUploader.Web/FileService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FileService.wsdl" MetadataType="Wsdl" ID="7a6c43ee-5c6b-48b7-910f-db12ed3a7241" SourceId="1" SourceUrl="http://localhost:9665/SilverlightUploader.Web/FileService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="FileService.disco" MetadataType="Disco" ID="0df418bc-d230-4080-8356-7c7c61b3a606" SourceId="1" SourceUrl="http://localhost:9665/SilverlightUploader.Web/FileService.svc?disco" />
+    <MetadataFile FileName="FileService1.xsd" MetadataType="Schema" ID="b2fd754e-b035-4886-9ffa-3c5a8282daaf" SourceId="1" SourceUrl="http://localhost:9665/SilverlightUploader.Web/FileService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FileService2.xsd" MetadataType="Schema" ID="b93b4764-9e36-4b46-9cd4-e5c662fca08a" SourceId="1" SourceUrl="http://localhost:9665/SilverlightUploader.Web/FileService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FileService1.wsdl" MetadataType="Wsdl" ID="33a744a4-ae9d-4ec9-b61d-0b106c56c2e9" SourceId="1" SourceUrl="http://localhost:9665/SilverlightUploader.Web/FileService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

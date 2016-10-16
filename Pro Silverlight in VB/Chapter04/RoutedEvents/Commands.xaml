@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="RoutedEvents.Commands"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:RoutedEvents" 
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <local:PrintTextCommand x:Key="printCommand"></local:PrintTextCommand>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Margin="5" Content="Print Command" Command="{StaticResource printCommand}" CommandParameter="{Binding ElementName=txt,Path=Text}"></Button>
+        <TextBox x:Name="txt" Grid.Row="1" Margin="5"></TextBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="CustomBinding_StoreDb">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:12169/DataControls.Web/StoreDb.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_StoreDb"
+                contract="DataService.StoreDb" name="CustomBinding_StoreDb" />
+        </client>
+    </system.serviceModel>
+</configuration>

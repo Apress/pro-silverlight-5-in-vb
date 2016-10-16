@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3877bbc2-73bd-4073-9b9a-7d4a030f9fa8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:13839/DuplexService.Web/AsyncTask.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AsyncTask.xsd" MetadataType="Schema" ID="2a498d29-3764-42c8-9efd-4962bc6857a2" SourceId="1" SourceUrl="http://localhost:13839/DuplexService.Web/AsyncTask.svc?xsd=xsd0" />
+    <MetadataFile FileName="AsyncTask1.xsd" MetadataType="Schema" ID="9680c0a7-07ca-4218-950a-04d00e399bbf" SourceId="1" SourceUrl="http://localhost:13839/DuplexService.Web/AsyncTask.svc?xsd=xsd2" />
+    <MetadataFile FileName="AsyncTask.wsdl" MetadataType="Wsdl" ID="e885fa76-0d51-430d-b9f3-379cc7a133b9" SourceId="1" SourceUrl="http://localhost:13839/DuplexService.Web/AsyncTask.svc?wsdl" />
+    <MetadataFile FileName="AsyncTask2.xsd" MetadataType="Schema" ID="bc5863a2-f794-47db-bd55-6c882b9dfedf" SourceId="1" SourceUrl="http://localhost:13839/DuplexService.Web/AsyncTask.svc?xsd=xsd1" />
+    <MetadataFile FileName="AsyncTask.disco" MetadataType="Disco" ID="6dfeb174-e2aa-4c9a-baa1-0f5b1f5d9101" SourceId="1" SourceUrl="http://localhost:13839/DuplexService.Web/AsyncTask.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

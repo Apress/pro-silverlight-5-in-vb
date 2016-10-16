@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Layout.SimpleWrap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:toolkit=
+ "clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+>
+	<toolkit:WrapPanel Margin="3">
+
+		<Button VerticalAlignment="Top" Content="Top Button"></Button>
+		<Button MinHeight="60" Content="Tall Button 2"></Button>
+		<Button VerticalAlignment="Bottom" Content="Bottom Button"></Button>
+		<Button Content="Stretch Button"></Button>
+		<Button VerticalAlignment="Center" Content="Centered Button"></Button>
+	</toolkit:WrapPanel>
+</UserControl>
+

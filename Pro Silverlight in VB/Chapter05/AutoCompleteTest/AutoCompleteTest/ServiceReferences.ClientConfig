@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="CustomBinding_ProductAutoComplete">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:3095/AutoCompleteTest.Web/ProductAutoComplete.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_ProductAutoComplete"
+                contract="AutoCompleteService.ProductAutoComplete" name="CustomBinding_ProductAutoComplete" />
+        </client>
+    </system.serviceModel>
+</configuration>

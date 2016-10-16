@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="ElevatedTrust.CustomWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Border Background="DarkSlateBlue" CornerRadius="2" Margin="0,0,1,1"
+            x:Name="windowBorder">
+        <Grid x:Name="resizeContainer">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="5"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="5"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Rectangle x:Name="rect_TopLeftCorner" Grid.Row="0" Grid.Column="0" 
+     Cursor="SizeNWSE" Fill="Transparent" MouseLeftButtonDown="rect_Resize" />
+            <Rectangle x:Name="rect_TopEdge" Grid.Row="0" Grid.Column="1"
+     Cursor="SizeNS" Fill="Transparent" MouseLeftButtonDown="rect_Resize" />
+            <Rectangle x:Name="rect_TopRightCorner" Grid.Row="0" Grid.Column="2"
+     Cursor="SizeNESW" Fill="Transparent" MouseLeftButtonDown="rect_Resize" />
+            <Rectangle x:Name="rect_LeftEdge" Grid.Row="1" Grid.Column="0"
+     Cursor="SizeWE" Fill="Transparent" MouseLeftButtonDown="rect_Resize" />
+            <Rectangle x:Name="rect_RightEdge" Grid.Row="1" Grid.Column="2"
+     Cursor="SizeWE" Fill="Transparent" MouseLeftButtonDown="rect_Resize" />
+            <Rectangle x:Name="rect_BottomLeftCorner" Grid.Row="2" Grid.Column="0"
+     Cursor="SizeNESW" Fill="Transparent" MouseLeftButtonDown="rect_Resize" />
+            <Rectangle x:Name="rect_BottomEdge" Grid.Row="2" Grid.Column="1"
+     Cursor="SizeNS" Fill="Transparent" MouseLeftButtonDown="rect_Resize" />
+            <Rectangle x:Name="rect_BottomRightCorner" Grid.Row="2" Grid.Column="2"
+     Cursor="SizeNWSE" Fill="Transparent" MouseLeftButtonDown="rect_Resize" />
+
+            <Grid Grid.Row="1" Grid.Column="1" Background="LightGoldenrodYellow">
+                <!-- The rest of the content goes here, including the title bar. -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Border Background="LightSteelBlue" MouseLeftButtonDown="titleBar_MouseLeftButtonDown" x:Name="titleBar">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Margin="5">Title Bar</TextBlock>
+                        <Button Grid.Column="1" x:Name="cmdMinimize" Width="24" Click="cmdMinimize_Click">
+                            <Path Stroke="Black" StrokeThickness="4" Data="M 1,10 L 13,10"/>
+                        </Button>
+
+                        <Button Grid.Column="2" x:Name="cmdMaximize" Width="24" Click="cmdMaximize_Click">
+                            <Rectangle Stroke="Black" StrokeThickness="3" Height="12" Width="12"/>
+                        </Button>
+
+                        <Button Grid.Column="3" x:Name="cmdClose" Width="24" Click="cmdClose_Click">
+                            <Path Stroke="Black" StrokeThickness="3" Data="M 2,2 L 12,12 M 12,2 L 2,12"/>
+                        </Button>
+                    </Grid>
+                </Border>
+
+                <Grid x:Name="LayoutRoot" Margin="5" Grid.Row="1">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"
+                           FontSize="20" FontWeight="Bold" FontFamily="Georgia">This is a borderless window.</TextBlock>
+                </Grid>
+            </Grid>
+        </Grid>
+
+    </Border>
+</UserControl>

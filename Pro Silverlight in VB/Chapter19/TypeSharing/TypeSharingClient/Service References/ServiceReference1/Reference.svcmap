@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fbc0c63e-001b-4fe0-b5c7-3ae2412876e8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6636/TypeSharing.Web/TestService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TestService.wsdl" MetadataType="Wsdl" ID="5fb01758-2c8b-4485-b282-ccbe8ee2841f" SourceId="1" SourceUrl="http://localhost:6636/TypeSharing.Web/TestService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TestService1.wsdl" MetadataType="Wsdl" ID="855a85d0-4ce9-41ff-8ba0-2b42654f074a" SourceId="1" SourceUrl="http://localhost:6636/TypeSharing.Web/TestService.svc?wsdl" />
+    <MetadataFile FileName="TestService.disco" MetadataType="Disco" ID="9506b351-6fad-476f-9359-04589e7c938e" SourceId="1" SourceUrl="http://localhost:6636/TypeSharing.Web/TestService.svc?disco" />
+    <MetadataFile FileName="TestService.xsd" MetadataType="Schema" ID="cf1391e3-2cd4-4668-a220-0b2af2ddcae4" SourceId="1" SourceUrl="http://localhost:6636/TypeSharing.Web/TestService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TestService1.xsd" MetadataType="Schema" ID="bb0cf91b-d55a-4622-9120-4e827be02e8b" SourceId="1" SourceUrl="http://localhost:6636/TypeSharing.Web/TestService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TestService2.xsd" MetadataType="Schema" ID="abd1bec5-20b1-45ec-9922-e1527619d939" SourceId="1" SourceUrl="http://localhost:6636/TypeSharing.Web/TestService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Elements.RichText"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <RichTextBox Margin="5" x:Name="richText">
+            <Paragraph Foreground="DarkRed" FontFamily="Trebuchet MS" FontSize="22" FontWeight="Bold">
+                <InlineUIContainer>
+                    <Image Source="bookcover.jpg" Stretch="None"></Image>
+                </InlineUIContainer>
+                Chapter I
+            </Paragraph>
+            <Paragraph>
+                <Bold>
+                    <Italic>
+                        <Run FontSize="12">The Period</Run>
+                    </Italic>
+                </Bold>
+            </Paragraph>
+            <Paragraph>
+                It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way--in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.
+                <LineBreak></LineBreak>
+            </Paragraph>
+            <Paragraph>
+                There were a king with a large jaw and a queen with a plain face, on the throne of England; there were a king with a large jaw and a queen with a fair face, on the throne of France. In both countries it was clearer than crystal to the lords of the State preserves of loaves and fishes, that things in general were settled for ever.
+                <LineBreak></LineBreak>
+            </Paragraph>
+            <Paragraph>
+                <Hyperlink Click="cmdGenerate_Click">Generate New Document</Hyperlink>
+            </Paragraph>
+        </RichTextBox>
+
+        <CheckBox Grid.Row="1" Margin="5" x:Name="chkReadOnly" Click="chkReadOnly_Click">Read-Only RichTextBox</CheckBox>
+        <Button Grid.Row="2" Margin="5" Padding="3" Click="cmdGenerate_Click">Generate New Document</Button>
+    </Grid>
+</UserControl>

@@ -1,0 +1,8 @@
+<UserControl x:Class="CustomContentLoader.InitialPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <TextBlock TextWrapping="Wrap">This is the unremarkable content in
+InitialPage.xaml.</TextBlock>
+    </Grid>
+</UserControl>

@@ -1,0 +1,53 @@
+﻿<UserControl xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+             xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data" 
+    x:Class="DataControls.DataGridTest"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Loaded="Page_Loaded"
+    xmlns:local="clr-namespace:DataControls">
+
+	<UserControl.Resources>
+		<local:ImagePathConverter x:Key="ImagePathConverter"></local:ImagePathConverter>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<data:DataGrid x:Name="gridProducts" Margin="5" AutoGenerateColumns="False" RowHeight="100" LoadingRow="gridProducts_LoadingRow"
+		>
+
+			<data:DataGrid.Columns>
+				<data:DataGridTextColumn Header="Product" Width="175" Binding="{Binding ModelName}"></data:DataGridTextColumn>
+                <data:DataGridTextColumn Header="Price" Binding="{Binding UnitCost, StringFormat='C'}"></data:DataGridTextColumn>
+				<data:DataGridTextColumn Header="Model Number" Binding="{Binding ModelNumber}"></data:DataGridTextColumn>
+				
+				<data:DataGridTextColumn Width="400" Binding="{Binding Description}" Header="Description">
+					<data:DataGridTextColumn.ElementStyle>
+						<Style TargetType="TextBlock">
+							<Setter Property="TextWrapping" Value="Wrap"></Setter>							
+						</Style>
+					</data:DataGridTextColumn.ElementStyle>
+				</data:DataGridTextColumn>
+				
+				<data:DataGridTextColumn IsReadOnly="True" Header="Category" Binding="{Binding CategoryName}"></data:DataGridTextColumn>
+				
+				
+				<data:DataGridTemplateColumn>
+					<data:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Image Stretch="None"
+						 Source="{Binding ProductImagePath, Converter={StaticResource ImagePathConverter}}" >
+							</Image>
+						</DataTemplate>
+					</data:DataGridTemplateColumn.CellTemplate>
+				</data:DataGridTemplateColumn>
+
+            </data:DataGrid.Columns>
+		</data:DataGrid>
+
+		<TextBlock Grid.Row="1" x:Name="lblInfo" Margin="5"></TextBlock>
+    </Grid>
+</UserControl>

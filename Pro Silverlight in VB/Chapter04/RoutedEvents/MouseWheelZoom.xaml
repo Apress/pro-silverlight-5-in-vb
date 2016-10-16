@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="RoutedEvents.MouseWheelZoom"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+   MouseWheel="Page_MouseWheel">
+
+	<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+		<Viewbox x:Name="viewbox" Height="250" Width="350">
+			<!-- This container is the layout root of your ordinary user interface. -->
+			<Grid Background="White" Height="250" Width="350">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+					<ColumnDefinition Width="Auto"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+
+				<TextBlock TextWrapping="Wrap" FontSize="12" Margin="3">To use the mouse wheel, make sure the mouse
+				is positioned over this box of content.</TextBlock>
+
+				<TextBox Grid.Row="1" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center" Text="Sample Text"></TextBox>
+				<Button Grid.Row="1" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+				<TextBox Grid.Row="2" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center" Text="Sample Text"></TextBox>
+				<Button Grid.Row="2" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+				<TextBox Grid.Row="3" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center" Text="Sample Text"></TextBox>
+				<Button Grid.Row="3" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+				<TextBox Grid.Row="4" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center" Text="Sample Text"></TextBox>
+				<Button Grid.Row="4" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+				<TextBox Grid.Row="5" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center" Text="Sample Text"></TextBox>
+				<Button Grid.Row="5" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+			</Grid>
+		</Viewbox>
+	</ScrollViewer>
+</UserControl>
+

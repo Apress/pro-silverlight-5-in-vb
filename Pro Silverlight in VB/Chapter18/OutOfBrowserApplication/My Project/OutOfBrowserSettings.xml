@@ -1,0 +1,9 @@
+<OutOfBrowserSettings ShortName="OutOfBrowserApplication Application" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>OutOfBrowserApplication Application on your desktop; at home, at work or on the go.</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="OutOfBrowserApplication Application" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons>
+    <Icon Size="128,128">AppIcons/InstallImage.png</Icon>
+  </OutOfBrowserSettings.Icons>
+</OutOfBrowserSettings>

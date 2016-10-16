@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="DataControls.ProportionalGridColumns"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data" 
+    xmlns:local="clr-namespace:DataControls"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400"   
+              Loaded="Page_Loaded">
+
+    <UserControl.Resources>
+        <local:ImagePathConverter x:Key="ImagePathConverter"></local:ImagePathConverter>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <data:DataGrid x:Name="gridProducts" Margin="5" AutoGenerateColumns="False" RowHeight="100" 
+		>
+
+            <data:DataGrid.Columns>
+                <data:DataGridTextColumn Header="Model Number" Binding="{Binding ModelNumber}"
+   Width="100"></data:DataGridTextColumn>
+
+                <data:DataGridTextColumn Header="Model Name" Width="100"
+   Binding="{Binding ModelName}"></data:DataGridTextColumn>
+
+                <data:DataGridTextColumn Header="Unit Cost" Width="*" MinWidth="50"
+   Binding="{Binding UnitCost, StringFormat='C'}"></data:DataGridTextColumn>
+
+                <data:DataGridTextColumn Width="2*" MinWidth="50"
+   Binding="{Binding Description}" Header="Description" >
+                    <data:DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                        </Style>
+                    </data:DataGridTextColumn.ElementStyle>
+                </data:DataGridTextColumn>
+            </data:DataGrid.Columns>
+
+        </data:DataGrid>
+
+        <TextBlock Grid.Row="1" x:Name="lblInfo" Margin="5"></TextBlock>
+    </Grid>
+</UserControl>

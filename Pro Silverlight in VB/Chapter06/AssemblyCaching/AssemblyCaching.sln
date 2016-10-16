@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AssemblyCaching", "AssemblyCaching\AssemblyCaching.vbproj", "{EF0B4E9F-3FB3-4890-ABC2-63734F054C48}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CacheableAssembly", "CacheableAssembly\CacheableAssembly.vbproj", "{6EE241E9-5ED9-40AD-A652-E873E438DCE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF0B4E9F-3FB3-4890-ABC2-63734F054C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0B4E9F-3FB3-4890-ABC2-63734F054C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0B4E9F-3FB3-4890-ABC2-63734F054C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0B4E9F-3FB3-4890-ABC2-63734F054C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE241E9-5ED9-40AD-A652-E873E438DCE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE241E9-5ED9-40AD-A652-E873E438DCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE241E9-5ED9-40AD-A652-E873E438DCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE241E9-5ED9-40AD-A652-E873E438DCE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

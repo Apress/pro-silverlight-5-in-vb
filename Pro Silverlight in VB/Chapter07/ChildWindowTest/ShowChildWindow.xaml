@@ -1,0 +1,11 @@
+<UserControl x:Class="ChildWindowTest.ShowChildWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400">
+    <StackPanel x:Name="LayoutRoot" Background="White">
+        <TextBlock x:Name="lblInfo" Margin="10" FontSize="14" TextWrapping="Wrap">Currently, you are an unknown user.
+            To enter your user information, click the button shown here.</TextBlock>
+        <Button Margin="10" Padding="10" Content="Enter User Information"
+                Click="cmdEnterInfo_Click"></Button>
+    </StackPanel>
+</UserControl>

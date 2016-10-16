@@ -1,0 +1,17 @@
+﻿<UserControl xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"  x:Class="Layout.SimpleDock"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+>
+	<toolkit:DockPanel LastChildFill="True">
+		<Button toolkit:DockPanel.Dock="Top" Content="A Stretched Top Button"></Button>
+		<Button toolkit:DockPanel.Dock="Top" HorizontalAlignment="Center"
+    Content="A Centered Top Button"></Button>
+		<Button toolkit:DockPanel.Dock="Top" HorizontalAlignment="Left"
+    Content="A Left-Aligned Top Button"></Button>
+		<Button toolkit:DockPanel.Dock="Bottom" Content="Bottom Button"></Button>
+		<Button toolkit:DockPanel.Dock="Left" Content="Left Button"></Button>
+		<Button toolkit:DockPanel.Dock="Right" Content="Right Button"></Button>
+		<Button Content="Remaining Space"></Button>
+	</toolkit:DockPanel>
+</UserControl>
+

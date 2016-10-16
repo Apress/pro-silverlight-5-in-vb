@@ -1,0 +1,228 @@
+<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Class="DeepZoomProject.Page"
+    mc:Ignorable="d" d:DesignHeight="291" d:DesignWidth="579">
+	<UserControl.Resources>
+		<ControlTemplate x:Key="zoomInTemplate" TargetType="Button">
+			<Grid>
+				<VisualStateManager.VisualStateGroups>
+					<VisualStateGroup x:Name="FocusStates">
+						<VisualStateGroup.Transitions>
+							<VisualTransition GeneratedDuration="00:00:00.1000000"/>
+						</VisualStateGroup.Transitions>
+						<VisualState x:Name="Unfocused"/>
+						<VisualState x:Name="Focused"/>
+					</VisualStateGroup>
+					<VisualStateGroup x:Name="CommonStates">
+						<VisualStateGroup.Transitions>
+							<VisualTransition GeneratedDuration="00:00:00.1000000"/>
+						</VisualStateGroup.Transitions>
+						<VisualState x:Name="MouseOver">
+							<Storyboard>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="normal" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="down" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="hover" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+							</Storyboard>
+						</VisualState>
+						<VisualState x:Name="Normal"/>
+						<VisualState x:Name="Pressed">
+							<Storyboard>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="normal" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="hover" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="down" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+							</Storyboard>
+						</VisualState>
+						<VisualState x:Name="Disabled"/>
+					</VisualStateGroup>
+				</VisualStateManager.VisualStateGroups>
+				<Image Height="26" x:Name="normal" Width="26" Stretch="Fill" Source="images/zoomin_rest.png"/>
+				<Image Height="26" x:Name="down" Width="26" Opacity="0" Stretch="Fill" Source="images/zoomin_pressed.png"/>
+				<Image Height="26" x:Name="hover" Width="26" Opacity="0" Stretch="Fill" Source="images/zoomin_hover.png"/>
+			</Grid>
+		</ControlTemplate>
+		<ControlTemplate x:Key="zoomOutTemplate" TargetType="Button">
+			<Grid>
+				<VisualStateManager.VisualStateGroups>
+					<VisualStateGroup x:Name="FocusStates">
+						<VisualStateGroup.Transitions>
+							<VisualTransition GeneratedDuration="00:00:00.1000000"/>
+						</VisualStateGroup.Transitions>
+						<VisualState x:Name="Unfocused"/>
+						<VisualState x:Name="Focused"/>
+					</VisualStateGroup>
+					<VisualStateGroup x:Name="CommonStates">
+						<VisualStateGroup.Transitions>
+							<VisualTransition GeneratedDuration="00:00:00.1000000"/>
+						</VisualStateGroup.Transitions>
+						<VisualState x:Name="MouseOver">
+							<Storyboard>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="normal" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="down" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="hover" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+							</Storyboard>
+						</VisualState>
+						<VisualState x:Name="Normal"/>
+						<VisualState x:Name="Pressed">
+							<Storyboard>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="normal" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="hover" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="down" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+							</Storyboard>
+						</VisualState>
+						<VisualState x:Name="Disabled"/>
+					</VisualStateGroup>
+				</VisualStateManager.VisualStateGroups>
+				<Image Height="26" x:Name="normal" Width="26" Stretch="Fill" Source="images/zoomout_rest.png"/>
+				<Image Height="26" x:Name="down" Width="26" Opacity="0" Stretch="Fill" Source="images/zoomout_pressed.png"/>
+				<Image Height="26" x:Name="hover" Width="26" Opacity="0" Stretch="Fill" Source="images/zoomout_hover.png"/>
+			</Grid>
+		</ControlTemplate>
+		<ControlTemplate x:Key="homeTemplate" TargetType="Button">
+			<Grid>
+				<VisualStateManager.VisualStateGroups>
+					<VisualStateGroup x:Name="FocusStates">
+						<VisualStateGroup.Transitions>
+							<VisualTransition GeneratedDuration="00:00:00.1000000"/>
+						</VisualStateGroup.Transitions>
+						<VisualState x:Name="Unfocused"/>
+						<VisualState x:Name="Focused"/>
+					</VisualStateGroup>
+					<VisualStateGroup x:Name="CommonStates">
+						<VisualStateGroup.Transitions>
+							<VisualTransition GeneratedDuration="00:00:00.1000000"/>
+						</VisualStateGroup.Transitions>
+						<VisualState x:Name="MouseOver">
+							<Storyboard>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="normal" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="down" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="hover" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+							</Storyboard>
+						</VisualState>
+						<VisualState x:Name="Normal"/>
+						<VisualState x:Name="Pressed">
+							<Storyboard>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="normal" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="hover" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="down" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+							</Storyboard>
+						</VisualState>
+						<VisualState x:Name="Disabled"/>
+					</VisualStateGroup>
+				</VisualStateManager.VisualStateGroups>
+				<Image Height="26" x:Name="normal" Width="26" Stretch="Fill" Source="images/home_rest.png"/>
+				<Image Height="26" x:Name="down" Width="26" Opacity="0" Stretch="Fill" Source="images/home_pressed.png"/>
+				<Image Height="26" x:Name="hover" Width="26" Opacity="0" Stretch="Fill" Source="images/home_hover.png"/>
+			</Grid>
+		</ControlTemplate>
+		<ControlTemplate x:Key="fullScreenTemplate" TargetType="Button">
+			<Grid>
+				<VisualStateManager.VisualStateGroups>
+					<VisualStateGroup x:Name="FocusStates">
+						<VisualStateGroup.Transitions>
+							<VisualTransition GeneratedDuration="00:00:00.1000000"/>
+						</VisualStateGroup.Transitions>
+						<VisualState x:Name="Unfocused"/>
+						<VisualState x:Name="Focused"/>
+					</VisualStateGroup>
+					<VisualStateGroup x:Name="CommonStates">
+						<VisualStateGroup.Transitions>
+							<VisualTransition GeneratedDuration="00:00:00.1000000"/>
+						</VisualStateGroup.Transitions>
+						<VisualState x:Name="MouseOver">
+							<Storyboard>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="normal" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="down" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="hover" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+							</Storyboard>
+						</VisualState>
+						<VisualState x:Name="Normal"/>
+						<VisualState x:Name="Pressed">
+							<Storyboard>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="normal" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="hover" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="down" Storyboard.TargetProperty="(UIElement.Opacity)">
+									<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+							</Storyboard>
+						</VisualState>
+						<VisualState x:Name="Disabled"/>
+					</VisualStateGroup>
+				</VisualStateManager.VisualStateGroups>
+				<Image Height="26" x:Name="normal" Width="26" Stretch="Fill" Source="images/fullscreen_rest.png"/>
+				<Image Height="26" x:Name="down" Width="26" Opacity="0" Stretch="Fill" Source="images/fullscreen_pressed.png"/>
+				<Image Height="26" x:Name="hover" Width="26" Opacity="0" Stretch="Fill" Source="images/fullscreen_hover.png"/>
+			</Grid>
+		</ControlTemplate>
+	</UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="Black" Width="Auto" Height="Auto" MouseEnter="EnterMovie" MouseLeave="LeaveMovie">
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="FadeButtons">
+    			<VisualStateGroup.Transitions>
+    				<VisualTransition GeneratedDuration="00:00:00.2000000"/>
+    			</VisualStateGroup.Transitions>
+    			<VisualState x:Name="FadeIn">
+    				<Storyboard>
+    					<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="buttonCanvas" Storyboard.TargetProperty="(UIElement.Opacity)">
+    						<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+    					</DoubleAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
+    			<VisualState x:Name="FadeOut"/>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
+		<MultiScaleImage x:Name="msi"/>
+    	<Canvas Height="37" HorizontalAlignment="Right" Margin="0,0,8,8" x:Name="buttonCanvas" VerticalAlignment="Bottom" Width="348" Opacity="0" Background="{x:Null}">
+    		<Button Height="30" x:Name="zoomIn" Width="42" Canvas.Left="197" Canvas.Top="4" Template="{StaticResource zoomInTemplate}" Content="Button" Click="ZoomInClick"/>
+    		<Button Height="30" x:Name="zoomOut" Width="42" Template="{StaticResource zoomOutTemplate}" Content="Button" Canvas.Left="227" Canvas.Top="4" Click="ZoomOutClick"/>
+    		<Button Height="30" x:Name="goHome" Width="42" Template="{StaticResource homeTemplate}" Content="Button" Canvas.Left="257" Canvas.Top="4" Click="GoHomeClick"/>
+    		<Button Height="30" x:Name="fullScreen" Width="42" Template="{StaticResource fullScreenTemplate}" Content="Button" Canvas.Left="287" Canvas.Top="4" Click="GoFullScreenClick"/>
+    	</Canvas>
+    </Grid>
+</UserControl>

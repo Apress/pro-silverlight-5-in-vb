@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:9665/SilverlightUploader.Web/FileService.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:9665/SilverlightUploader.Web/FileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9665/SilverlightUploader.Web/FileService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="FileService_GetFileList_InputMessage">
+    <wsdl:part name="parameters" element="GetFileList" />
+  </wsdl:message>
+  <wsdl:message name="FileService_GetFileList_OutputMessage">
+    <wsdl:part name="parameters" element="GetFileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="FileService_DownloadFile_InputMessage">
+    <wsdl:part name="parameters" element="DownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="FileService_DownloadFile_OutputMessage">
+    <wsdl:part name="parameters" element="DownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="FileService_UploadFile_InputMessage">
+    <wsdl:part name="parameters" element="UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="FileService_UploadFile_OutputMessage">
+    <wsdl:part name="parameters" element="UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FileService">
+    <wsdl:operation name="GetFileList">
+      <wsdl:input wsaw:Action="urn:FileService/GetFileList" message="FileService_GetFileList_InputMessage" />
+      <wsdl:output wsaw:Action="urn:FileService/GetFileListResponse" message="FileService_GetFileList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="urn:FileService/DownloadFile" message="FileService_DownloadFile_InputMessage" />
+      <wsdl:output wsaw:Action="urn:FileService/DownloadFileResponse" message="FileService_DownloadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input wsaw:Action="urn:FileService/UploadFile" message="FileService_UploadFile_InputMessage" />
+      <wsdl:output wsaw:Action="urn:FileService/UploadFileResponse" message="FileService_UploadFile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

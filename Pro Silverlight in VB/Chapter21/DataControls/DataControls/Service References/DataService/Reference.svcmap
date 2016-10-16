@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f0736401-8b20-48e5-95ee-009c210dad04" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:12169/DataControls.Web/StoreDb.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="StoreDb.xsd" MetadataType="Schema" ID="71919dee-90d5-4581-97a7-e2caa98138f0" SourceId="1" SourceUrl="http://localhost:12169/DataControls.Web/StoreDb.svc?xsd=xsd3" />
+    <MetadataFile FileName="StoreDb2.xsd" MetadataType="Schema" ID="7f92b9c5-2f36-46fd-96ed-0e4b360b012c" SourceId="1" SourceUrl="http://localhost:12169/DataControls.Web/StoreDb.svc?xsd=xsd1" />
+    <MetadataFile FileName="StoreDb1.wsdl" MetadataType="Wsdl" ID="7326faaf-73b2-44ca-9bb3-21f4eac4734a" SourceId="1" SourceUrl="http://localhost:12169/DataControls.Web/StoreDb.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="StoreDb1.xsd" MetadataType="Schema" ID="32b7a65a-3c58-43f3-9575-75ebca9513a9" SourceId="1" SourceUrl="http://localhost:12169/DataControls.Web/StoreDb.svc?xsd=xsd2" />
+    <MetadataFile FileName="StoreDb.wsdl" MetadataType="Wsdl" ID="7b3f250e-8f8e-4ea1-b0f0-d73baa72e957" SourceId="1" SourceUrl="http://localhost:12169/DataControls.Web/StoreDb.svc?wsdl" />
+    <MetadataFile FileName="StoreDb3.xsd" MetadataType="Schema" ID="7089b3ea-e87b-474d-ac22-1f729b66cd0c" SourceId="1" SourceUrl="http://localhost:12169/DataControls.Web/StoreDb.svc?xsd=xsd0" />
+    <MetadataFile FileName="StoreDb.disco" MetadataType="Disco" ID="5402ec27-db2d-4531-9287-f945ea9e8864" SourceId="1" SourceUrl="http://localhost:12169/DataControls.Web/StoreDb.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

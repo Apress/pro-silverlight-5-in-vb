@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6339740c-d46d-4a7d-9d59-33b5b44f0507" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3095/AutoCompleteTest.Web/ProductAutoComplete.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductAutoComplete.xsd" MetadataType="Schema" ID="41bb2cd5-18f7-4560-8516-765839eee1a3" SourceId="1" SourceUrl="http://localhost:3095/AutoCompleteTest.Web/ProductAutoComplete.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProductAutoComplete.disco" MetadataType="Disco" ID="c62e3f94-fc0b-4384-b57a-28f07b39733b" SourceId="1" SourceUrl="http://localhost:3095/AutoCompleteTest.Web/ProductAutoComplete.svc?disco" />
+    <MetadataFile FileName="ProductAutoComplete1.xsd" MetadataType="Schema" ID="2ad89fb8-35eb-4e8a-ad3e-bfd32e79c84c" SourceId="1" SourceUrl="http://localhost:3095/AutoCompleteTest.Web/ProductAutoComplete.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProductAutoComplete.wsdl" MetadataType="Wsdl" ID="1bdb9e51-3dd1-4504-8bbb-f089d3bf6439" SourceId="1" SourceUrl="http://localhost:3095/AutoCompleteTest.Web/ProductAutoComplete.svc?wsdl" />
+    <MetadataFile FileName="ProductAutoComplete2.xsd" MetadataType="Schema" ID="1e830169-13e6-4e2f-bb65-e13eef20e70d" SourceId="1" SourceUrl="http://localhost:3095/AutoCompleteTest.Web/ProductAutoComplete.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProductAutoComplete1.wsdl" MetadataType="Wsdl" ID="e4ff2b21-597e-4c20-a12c-210a1728ffee" SourceId="1" SourceUrl="http://localhost:3095/AutoCompleteTest.Web/ProductAutoComplete.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

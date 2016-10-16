@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="IsolatedStorage.SaveFile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="txtData"  Margin="5" TextWrapping="Wrap" AcceptsReturn="True" Text="Sample text."></TextBox>
+        <Button Grid.Row="1" Margin="5" Content="Save File" Click="cmdSaveFile_Click"></Button>
+        <TextBlock x:Name="lblFileName" Margin="5" Grid.Row="2"></TextBlock>
+    </Grid>
+</UserControl>

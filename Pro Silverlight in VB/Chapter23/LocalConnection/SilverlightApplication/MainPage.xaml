@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="SilverlightApplication.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
+    <Grid x:Name="LayoutRoot" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="20" Foreground="DarkRed" FontWeight="Bold" Margin="5">Main Application</TextBlock>
+        <TextBlock Margin="5" Grid.Row="1" TextWrapping="Wrap">Every time you press a key, your text is passed
+		to the Eavesdropper application.</TextBlock>
+        <TextBox x:Name="txt" Grid.Row="2" Margin="5" KeyUp="txt_KeyUp"></TextBox>
+    </Grid>
+</UserControl>
+
